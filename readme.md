@@ -9,6 +9,10 @@ This is a sample project for basic typescript projects consisting of a backend a
 - vscode configuration for suggestion extensions and enabling eslint with prettier
 
 ### How to run the project (from root folder)
+Install all dependencies
+```
+npm i
+```
 Start backend where the backend gets compiled and run the compiled server by node.
 ```
 npm run start:backend
