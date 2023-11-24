@@ -1,0 +1,21 @@
+{
+    "eslint.validate": ["javascript", "typescript"],
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/package-lock.json": true
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.eol": "\n",
+    "prettier.requireConfig": true,
+    "editor.codeActionsOnSave": {
+        "source.formatOnSave": true,
+        "source.fixAll.eslint": true 
+    },
+    // config for prettier by rvest
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnPaste": false, // required 
+    "editor.formatOnType": false, // required
+    "editor.formatOnSaveMode": "file", // required to format on save
+    "files.autoSave": "onFocusChange", // optional but recommended
+    "vs-code-prettier-eslint.prettierLast": false // set as "true" to run 'prettier' last not first
+}

@@ -1,0 +1,69 @@
+{
+	"extends": ["plugin:prettier/recommended"],
+	"plugins": ["@typescript-eslint"],
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2023
+	},
+	"overrides": [
+		{
+			"files": "**/*.ts",
+			"env": {
+				"browser": false
+			},
+			"parser": "@typescript-eslint/parser",
+			"parserOptions": {
+				"sourceType": "module",
+				"ecmaFeatures": {
+					"modules": true
+				},
+				// Override for backend project; can be extended for multiple backends for example
+				"project": ["./backend/tsconfig.json"]
+			},
+			"plugins": ["@typescript-eslint"],
+			"rules": {
+				// Enforce naming conventions for everything across a codebase
+				"@typescript-eslint/naming-convention": [
+					"error",
+					// Interfaces should start with 'I' followed by upper case character
+					{
+						"selector": "interface",
+						"format": ["PascalCase"],
+						"custom": {
+							"regex": "^I[A-Z]",
+							"match": true
+						}
+					}
+				],
+				// Disallow invocation of require()
+				"@typescript-eslint/no-require-imports": ["off", false],
+				// Disallow require statements except in import statements
+				"@typescript-eslint/no-var-requires": ["off", false],
+
+				// Note: you must disable the base rule as it can report incorrect errors
+				"space-before-function-paren": "off",
+				"@typescript-eslint/space-before-function-paren": "error",
+				"@typescript-eslint/no-floating-promises": ["error",
+					{
+						"ignoreVoid": false,
+						"ignoreIIFE": false
+					}
+				],
+				// Require const declarations for variables that are never reassigned after declared
+				"prefer-const": "error",
+				// "no-undef": "error",
+				// Enforce consistent indentation
+				"indent": ["error", "tab"],
+				// Enforce consistent linebreak style
+				"linebreak-style": ["error", "unix"],
+				// Enforce the consistent use of single quotes
+				"quotes": ["error", "single"],
+				// Require semicolons instead of ASI
+				"semi": ["error", "always"]
+			}
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "eamodio.gitlens",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "rvest.vs-code-prettier-eslint",
+        "oouo-diogo-perdigao.docthis",
+        "dbaeumer.vscode-eslint"
+    ],
+    "unwantedRecommendations": ["esbenp.prettier-vscode"]
+}
