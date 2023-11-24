@@ -4,7 +4,8 @@
 	"description": "",
 	"scripts": {
 		"start:backend": "npm run --prefix backend start",
-		"dev:backend": "npm run --prefix backend dev"
+		"dev:backend": "npm run --prefix backend dev",
+		"postinstall": "cd ./backend && npm install"
 	},
 	"keywords": [],
 	"author": "",
