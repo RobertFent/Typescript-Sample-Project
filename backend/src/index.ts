@@ -3,3 +3,7 @@ const sayHello = () => {
 };
 
 sayHello();
+
+setTimeout(() => {
+	console.log('Hello again');
+}, 10000);

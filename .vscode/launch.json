@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Backend",
+            "type": "node",
+            "request": "attach",
+            "port": 9030,
+            "restart": true,
+            "localRoot": "${workspaceFolder}/backend",
+            "sourceMaps": true,
+            "cwd": "${workspaceFolder}/backend"
+        }
+    ]
+  }
